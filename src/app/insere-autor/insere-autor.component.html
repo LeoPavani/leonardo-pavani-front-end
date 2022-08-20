@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="text-center m-5">
+    <h1>Inserindo autor</h1>
+  </div>
+  <form [formGroup]="cadastroForm">
+    <div class="nome-completo form-group mb-3">
+      <label for="nome ">Nome completo*</label>
+      <input
+        class="form-control"
+        formControlName="nome"
+        type="text"
+        id="nome"
+        name="nome"
+        required
+        placeholder="Nome completo do autor"
+      />
+      <app-mensagem *ngIf="cadastroForm.get('nome')?.errors?.['required'] && cadastroForm.get('nome')?.touched" mensagem="O campo Nome é obrigatório!"></app-mensagem>
+    </div>
+    <div class="nome-completo form-group mb-3">
+      <label for="nome-completo ">Biografia*</label>
+      <input
+        class="form-control"
+        formControlName="biografia"
+        type="text"
+        id="biografia"
+        name="biografia"
+        required
+        placeholder="Biografia do autor"
+      />
+      <app-mensagem *ngIf="cadastroForm.get('biografia')?.errors?.['required'] && cadastroForm.get('biografia')?.touched" mensagem="O campo Biografia é obrigatório!"></app-mensagem>
+    </div>
+    <div class="text-center m-5">
+      <button (click)="salvarAutor()" type="button" class="btn btn-primary">Salvar</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,49 @@
+<div class="container">
+  <div class="text-center m-5">
+    <h1>Inserindo livro</h1>
+  </div>
+  <form [formGroup]="cadastroForm">
+    <div class="form-group mb-3">
+      <label for="titulo">Título do livro*</label>
+      <input
+        class="form-control"
+        formControlName="titulo"
+        type="text"
+        id="titulo"
+        name="titulo"
+        required
+        placeholder="Título do livro"
+      />
+      <app-mensagem *ngIf="cadastroForm.get('titulo')?.errors?.['required'] && cadastroForm.get('titulo')?.touched" mensagem="O campo Título é obrigatório!"></app-mensagem>
+    </div>
+    <div class="form-group mb-3">
+      <label for="ano-lancamento">Ano de lançamento*</label>
+      <input
+        class="form-control"
+        formControlName="anoLancamento"
+        type="number"
+        id="ano-lancamento"
+        name="anoLancamento"
+        required
+        placeholder="Ano de lançamento do livro"
+      />
+      <app-mensagem *ngIf="cadastroForm.get('anoLancamento')?.errors?.['required'] && cadastroForm.get('anoLancamento')?.touched" mensagem="O campo Ano de Lançamento é obrigatório!"></app-mensagem>
+    </div>
+    <div class="form-group mb-3">
+      <label for="autores-ids">Ids dos autores*</label>
+      <input
+        class="form-control"
+        formControlName="autoresIds"
+        type="text"
+        id="autores-ids"
+        name="autoresIds"
+        required
+        placeholder="Ids dos autores do livro"
+      />
+      <app-mensagem *ngIf="cadastroForm.get('autoresIds')?.errors?.['required'] && cadastroForm.get('autoresIds')?.touched" mensagem="Deve haver pelo menos um Autor!"></app-mensagem>
+    </div>
+    <div class="text-center m-5">
+      <button (click)="salvarLivro()" type="button" class="btn btn-primary">Salvar</button>
+    </div>
+  </form>
+</div>

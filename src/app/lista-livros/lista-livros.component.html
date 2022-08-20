@@ -1,0 +1,47 @@
+<div class="container">
+  <div class="text-center m-5">
+    <h1>Listando livros</h1>
+  </div>
+  <button routerLink="/insere-livro" type="button" class="btn btn-primary">Inserir novo livro</button>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Título</th>
+        <th scope="col" class="text-center">Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let livro of listaDeLivros">
+        <td scope="row">{{livro.titulo}}</td>
+        <td class="btn-group text-center">
+          <a [routerLink]="['/edita-livro', livro.id]" type="button" class="btn btn-warning btn-md m-1">
+            <fa-icon [icon]="penIcon"></fa-icon>
+          </a>
+          <button type="button" class="btn btn-danger btn-md m-1" data-bs-toggle="modal" data-bs-target="#staticBackdrop" (click)="selecionaLivro(livro.id, livro.titulo)">
+            <fa-icon [icon]="trashIcon"></fa-icon>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <app-mensagem *ngIf="listaDeLivros.length < 1" mensagem="Não há livros cadastrados"></app-mensagem>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Espera aí!</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Tem certeza que deseja excluir o livro {{tituloASerExcluido}}
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Não</button>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="excluir(idASerExcluido)">Sim</button>
+      </div>
+    </div>
+  </div>
+</div>

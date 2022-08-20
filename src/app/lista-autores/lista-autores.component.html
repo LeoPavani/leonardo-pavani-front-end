@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="text-center m-5">
+    <h1>Listando usuários</h1>
+  </div>
+  <button routerLink="/insere-autor" type="button" class="btn btn-primary">Inserir novo autor</button>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col" class="text-center">Editar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let autor of listaDeAutores">
+        <td scope="row">{{autor.nome}}</td>
+        <td class="text-center">
+          <a [routerLink]="['/edita-autor', autor.id]" type="button" class="btn btn-warning btn-md m-2">
+            <fa-icon [icon]="penIcon"></fa-icon>
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <app-mensagem *ngIf="listaDeAutores.length < 1" mensagem="Não há autores cadastrados"></app-mensagem>
+</div>
