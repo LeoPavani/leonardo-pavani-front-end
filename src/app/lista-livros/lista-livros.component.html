@@ -12,8 +12,8 @@
     </thead>
     <tbody>
       <tr *ngFor="let livro of listaDeLivros">
-        <td scope="row">{{livro.titulo}}</td>
-        <td class="btn-group text-center">
+        <td scope="row" class="align-middle">{{livro.titulo}}</td>
+        <td class="text-center">
           <a [routerLink]="['/edita-livro', livro.id]" type="button" class="btn btn-warning btn-md m-1">
             <fa-icon [icon]="penIcon"></fa-icon>
           </a>

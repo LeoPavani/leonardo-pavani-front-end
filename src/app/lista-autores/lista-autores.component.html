@@ -1,6 +1,6 @@
 <div class="container">
   <div class="text-center m-5">
-    <h1>Listando usuários</h1>
+    <h1>Listando autores</h1>
   </div>
   <button routerLink="/insere-autor" type="button" class="btn btn-primary">Inserir novo autor</button>
   <table class="table table-striped">
@@ -12,7 +12,7 @@
     </thead>
     <tbody>
       <tr *ngFor="let autor of listaDeAutores">
-        <td scope="row">{{autor.nome}}</td>
+        <td scope="row" class="align-middle">{{autor.nome}}</td>
         <td class="text-center">
           <a [routerLink]="['/edita-autor', autor.id]" type="button" class="btn btn-warning btn-md m-2">
             <fa-icon [icon]="penIcon"></fa-icon>

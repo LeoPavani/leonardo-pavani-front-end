@@ -14,6 +14,7 @@ import { InsereLivroComponent } from './insere-livro/insere-livro.component';
 import { EditaLivroComponent } from './edita-livro/edita-livro.component';
 import { MensagemModule } from './shared/mensagem/mensagem.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { NavegacaoModule } from './navegacao/navegacao.module';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     ReactiveFormsModule,
     MensagemModule,
     FontAwesomeModule,
+    NavegacaoModule
   ],
   providers: [],
   bootstrap: [AppComponent]
