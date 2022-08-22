@@ -1,27 +1,22 @@
-# LeonardoPavaniFrontEnd
+# Front End Biblioteca - Leonardo Pavani
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.5.
+Este projeto foi feito para a avaliação 0.2 do projeto Acelera. 
 
-## Development server
+## Sobre:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Usamos a API criada anteriormente para fazer todas as requisições. Nesse projeto, conseguimos listar, inserir e editar autores, e listar, inserir, editar e excluir livros.
 
-## Code scaffolding
+## Tecnologias utilizadas:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Angular e bootstrap.
 
-## Build
+## Baixando e executando o projeto:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+<li>Baixar o zip do projeto.</li>
+<li>Descompactar a pasta baixada.</li>
+<li>No terminal, dentro da pasta descompactada, executar o comando: <strong>npm install</strong> para baixar todas as dependências. Certifique-se que o Node está instalado na sua máquina, caso precise instalar, siga o passo a passo: <a href="https://phoenixnap.com/kb/install-node-js-npm-on-windows">Como instalar o NodeJs</a>.</li>
+<li>Executar o comando <strong>ng s --o</strong> para subir o servidor. Certifique-se que você tem o Angular cLI instalado na sua máquina, caso precise instalar, siga o passo a passo: <a href="https://angular.io/cli">Como instalar o Angular CLi</a>.</li>
 
-## Running unit tests
+O browser irá abrir uma página no endereço <strong>http://localhost:4200/</strong>, onde o projeto estará pronto para ser testado.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Desenvolvido por: Leonardo Pavani
